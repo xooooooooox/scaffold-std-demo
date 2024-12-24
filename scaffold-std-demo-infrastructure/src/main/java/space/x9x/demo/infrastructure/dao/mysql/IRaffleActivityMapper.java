@@ -1,11 +1,12 @@
 package space.x9x.demo.infrastructure.dao.mysql;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Mapper;
-import space.x9x.demo.domain.manage.model.entity.RaffleActivityPageQuery;
 import space.x9x.demo.infrastructure.dao.po.RaffleActivityPO;
+import space.x9x.radp.mybatis.spring.boot.extension.LambdaQueryWrapperX;
+import space.x9x.radp.mybatis.spring.boot.mapper.BaseMapperX;
+import space.x9x.radp.spring.framework.dto.PageParam;
 import space.x9x.radp.spring.framework.dto.PageResult;
 
 /**
@@ -13,11 +14,12 @@ import space.x9x.radp.spring.framework.dto.PageResult;
  * @since 2024-12-24 12:15
  */
 @Mapper
-public interface IRaffleActivityMapper extends BaseMapper<RaffleActivityPO> {
+public interface IRaffleActivityMapper extends BaseMapperX<RaffleActivityPO> {
 
-    default PageResult<RaffleActivityPO> pages(RaffleActivityPageQuery pageQuery, RaffleActivityPO filter) {
-        Page<RaffleActivityPO> page = new Page<>(pageQuery.getPageIndex(), pageQuery.getPageSize());
-        Page<RaffleActivityPO> resultPage = selectPage(page, new LambdaQueryWrapper<>(filter));
-        return PageResult.build(resultPage.getRecords(), (int) resultPage.getTotal());
+    default PageResult<RaffleActivityPO> pages(PageParam pageParam, RaffleActivityPO filter) {
+        return selectPage(pageParam, new LambdaQueryWrapperX<RaffleActivityPO>()
+                .eqIfPresent(RaffleActivityPO::getActivityStartTime, filter.getActivityStartTime()));
     }
+
+    IPage<RaffleActivityPO> pagesXml(Page<RaffleActivityPO> page);
 }

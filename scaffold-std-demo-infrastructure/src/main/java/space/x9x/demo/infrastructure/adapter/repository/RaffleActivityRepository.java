@@ -5,10 +5,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import space.x9x.demo.domain.manage.adapter.repository.IRaffleActivityRepository;
 import space.x9x.demo.domain.manage.model.entity.RaffleActivityEntity;
-import space.x9x.demo.domain.manage.model.entity.RaffleActivityPageQuery;
 import space.x9x.demo.infrastructure.dao.convertor.IRaffleActivityConvertor;
 import space.x9x.demo.infrastructure.dao.mysql.IRaffleActivityMapper;
 import space.x9x.demo.infrastructure.dao.po.RaffleActivityPO;
+import space.x9x.radp.spring.framework.dto.PageParam;
 import space.x9x.radp.spring.framework.dto.PageResult;
 
 import java.util.stream.Collectors;
@@ -23,11 +23,10 @@ import java.util.stream.Collectors;
 public class RaffleActivityRepository implements IRaffleActivityRepository {
 
     private final IRaffleActivityMapper raffleActivityMapper;
-//    private final IRaffleActivityConvertor raffleActivityConvertor;
 
     @Override
-    public PageResult<RaffleActivityEntity> selectPage(RaffleActivityPageQuery pageQuery, RaffleActivityEntity entity) {
-        PageResult<RaffleActivityPO> pageResult = raffleActivityMapper.pages(pageQuery, IRaffleActivityConvertor.INSTANCE.targetToSource(entity));
+    public PageResult<RaffleActivityEntity> selectPage(PageParam pageParam, RaffleActivityEntity entity) {
+        PageResult<RaffleActivityPO> pageResult = raffleActivityMapper.pages(pageParam, IRaffleActivityConvertor.INSTANCE.targetToSource(entity));
 
         return PageResult.build(pageResult.getData().stream()
                 .map(IRaffleActivityConvertor.INSTANCE::sourceToTarget)

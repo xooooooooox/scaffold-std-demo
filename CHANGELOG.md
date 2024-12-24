@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## feat/241224-page_query_v2
+
+- 分页查询示例 v2 (使用 `space.x9x.radp:scaffold-std-demo:0.1.4`)
+
 ## feat/241224-page_query_v1
 
 - 分页查询示例 v1

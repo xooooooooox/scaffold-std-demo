@@ -1,7 +1,7 @@
 package space.x9x.demo.domain.manage.adapter.repository;
 
 import space.x9x.demo.domain.manage.model.entity.RaffleActivityEntity;
-import space.x9x.demo.domain.manage.model.entity.RaffleActivityPageQuery;
+import space.x9x.radp.spring.framework.dto.PageParam;
 import space.x9x.radp.spring.framework.dto.PageResult;
 
 /**
@@ -10,5 +10,5 @@ import space.x9x.radp.spring.framework.dto.PageResult;
  */
 public interface IRaffleActivityRepository {
 
-    PageResult<RaffleActivityEntity> selectPage(RaffleActivityPageQuery pageQuery, RaffleActivityEntity entity);
+    PageResult<RaffleActivityEntity> selectPage(PageParam pageParam, RaffleActivityEntity entity);
 }

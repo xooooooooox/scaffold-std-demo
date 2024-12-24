@@ -11,6 +11,7 @@ import space.x9x.radp.spring.framework.domain.BaseConvertor;
  * @since 2024-12-24 13:15
  */
 //@Mapper(componentModel = "spring")
+@Mapper
 public interface IRaffleActivityConvertor extends BaseConvertor<RaffleActivityPO, RaffleActivityEntity> {
 
     IRaffleActivityConvertor INSTANCE = Mappers.getMapper(IRaffleActivityConvertor.class);
