@@ -1,30 +1,18 @@
 databaseChangeLog:
   - changeSet:
-      id: 20241018-001 # TODO: format yyyyMMdd-xxx(序号)
-      author: x9x # TODO: changeSet author
-      comment: 示例变更日志 # TODO: changeSet comment
-      changes: # TODO 根据实际情况编写, 将 ddl 与 dml 分开编写, 至于 dml 可以选择是使用 csv 或者 sql
+      id: 20241224-001
+      author: x9x
+      comment: 分页查询示例
+      changes:
         - sqlFile:
             relativeToChangelogFile: true
-            path: ../migration/20241018/ddl/changes-ddl.sql
+            path: ../migration/20241224/ddl/changes-ddl.sql
             stripComments: true
         - sqlFile:
             relativeToChangelogFile: true
-            path: ../migration/20241018/dml/changes-dml.sql
-        - loadData:
-            relativeToChangelogFile: true
-            file: ../migration/20241018/dml/demo.csv
-            tableName: demo
-            separator: ;
-            columns:
-              - column:
-                  name: name
-                  type: varchar
-              - column:
-                  name: locked
-                  type: boolean
-      rollback: # TODO: 需要编写如何 回退
+            path: ../migration/20241224/dml/changes-dml.sql
+      rollback:
         - sqlFile:
             relativeToChangelogFile: true
-            path: ../migration/20241018/rollback.sql
+            path: ../migration/20241224/rollback.sql
             stripComments: true

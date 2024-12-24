@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS scaffold-std-demo;
+CREATE DATABASE IF NOT EXISTS `scaffold-std-demo`;

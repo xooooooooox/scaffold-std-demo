@@ -77,4 +77,4 @@
  * 那么也就是基础设施层负责对接 数据库, 缓存, 配置中心, RPC接口, HTTP接口, MQ推送等各项资源, 并承接领域服务的接口调用各项服务为领域层提供数据能力. <br/>
  * 同时这也会体现出, 领域层的实现是具有业务语义的, 而到了基础设施层则没有业务语义, 都是原子的方法, 通过原子方法的组合为领域业务语义提供支撑. <br/>
  */
-package space.x9x.demo.domain.xxx.adapter;
+package space.x9x.demo.domain.manage.adapter;

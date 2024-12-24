@@ -36,4 +36,4 @@
  *   <li><strong>持久化：</strong>聚合根通常与数据持久化层交互，以保存聚合的状态。这通常涉及到对象-关系映射（ORM）或其他数据映射技术。</li>
  * </ul>
  */
-package space.x9x.demo.domain.xxx.model.aggregate;
+package space.x9x.demo.domain.manage.model.aggregate;

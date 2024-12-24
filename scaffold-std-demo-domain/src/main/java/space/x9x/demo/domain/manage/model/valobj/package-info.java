@@ -40,4 +40,4 @@
  *   <li><strong>考虑序列化支持：</strong>如果值对象需要在网络上传输或存储到数据库中，需要提供序列化和反序列化的支持。</li>
  * </ul>
  */
-package space.x9x.demo.domain.xxx.model.valobj;
+package space.x9x.demo.domain.manage.model.valobj;

@@ -40,4 +40,4 @@
  *   <li><strong>使用领域事件：</strong>当实体的状态发生变化时，可以发布领域事件。这样可以通知其它部分的系统进行相应的处理。</li>
  * </ul>
  */
-package space.x9x.demo.domain.xxx.model.entity;
+package space.x9x.demo.domain.manage.model.entity;

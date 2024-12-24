@@ -95,4 +95,4 @@
  * }
  * }</pre>
  */
-package space.x9x.demo.domain.xxx.adapter.event;
+package space.x9x.demo.domain.manage.adapter.event;
