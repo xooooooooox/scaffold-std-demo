@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>space.x9x.radp</groupId>
+        <artifactId>radp-parent</artifactId>
+        <version>0.1.3</version>
+    </parent>
+    <packaging>pom</packaging>
+    <groupId>space.x9x.demo</groupId>
+    <artifactId>scaffold-std-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>scaffold-std-demo-types</module>
+        <module>scaffold-std-demo-api</module>
+        <module>scaffold-std-demo-domain</module>
+        <module>scaffold-std-demo-infrastructure</module>
+        <module>scaffold-std-demo-trigger</module>
+        <module>scaffold-std-demo-app</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>space.x9x.demo</groupId>
+                <artifactId>scaffold-std-demo-api</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>space.x9x.demo</groupId>
+                <artifactId>scaffold-std-demo-domain</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>space.x9x.demo</groupId>
+                <artifactId>scaffold-std-demo-infrastructure</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>space.x9x.demo</groupId>
+                <artifactId>scaffold-std-demo-trigger</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>space.x9x.demo</groupId>
+                <artifactId>scaffold-std-demo-types</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
