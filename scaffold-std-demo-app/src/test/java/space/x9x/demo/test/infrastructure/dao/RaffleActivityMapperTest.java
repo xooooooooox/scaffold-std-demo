@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import space.x9x.demo.infrastructure.dao.mysql.IRaffleActivityMapper;
 import space.x9x.demo.infrastructure.dao.po.RaffleActivityPO;
 import space.x9x.radp.commons.json.JacksonUtils;
+import space.x9x.radp.mybatis.spring.boot.extension.LambdaQueryWrapperX;
 import space.x9x.radp.spring.framework.dto.PageParam;
 
 /**
@@ -28,7 +29,8 @@ class RaffleActivityMapperTest {
 
     @Test
     void test_page() {
-        log.info(JacksonUtils.toJSONString(raffleActivityMapper.pages(new PageParam(1, 5), null)));
+        RaffleActivityPO filter = new RaffleActivityPO();
+        log.info(JacksonUtils.toJSONString(raffleActivityMapper.pages(new PageParam(1, 5), filter)));
     }
 
     @Test
