@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## feat/241227-common-id_generator
+
+- `NanoIdGenerator`, `SnowflakeGenerator` 示例
+- upgrade parent version to `0.3`
+
 ## feat/241224-page_query_v2
 
 - 分页查询示例 v2 (使用 `space.x9x.radp:scaffold-std-demo:0.2`)
