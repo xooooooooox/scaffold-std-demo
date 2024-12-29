@@ -1,0 +1,7 @@
+includes:
+  - project: homelab/gitlab-ci-templates
+    ref: main
+    file: templates/java-pipeline.yml
+
+variables:
+  BUILD_SHELL: 'mvn clean package -DskipTests'

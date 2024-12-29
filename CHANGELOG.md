@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## feat/241229-devops-gitlab_ci
+
+- Support GitLab CI/CD
+
 ## feat/241227-common-id_generator
 
 - `NanoIdGenerator`, `SnowflakeGenerator` 示例
