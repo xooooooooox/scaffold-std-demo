@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## feat/241229-devops-gitlab_ci
+## feat/241229-devops-integration_cicd
 
 - Support GitLab CI/CD
 - Support GitHub Actions
