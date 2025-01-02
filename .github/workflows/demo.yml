@@ -24,6 +24,7 @@ jobs:
           ls -lh
           pwd
           env | tee ./env_file
+          ls -l ./env_file
 
       - name: upload env
         uses: actions/upload-artifact@v4
