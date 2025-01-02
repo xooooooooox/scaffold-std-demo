@@ -11,7 +11,7 @@ variables:
 
   ## 构建参数
   TP_BUILD_IMAGE: ${DF_MAVEN_IMAGE}
-  TP_BUILD_SHELL: "mvn clean package ${TP_MAVEN_OPTS} -DskipTests"
+  TP_BUILD_SHELL: "mvn clean package ${TP_MAVEN_OPTS} -DskipTests -Pcoding"
 
   ## 单元测试参数
   TP_TEST_IMAGE: ${TP_BUILD_IMAGE}
