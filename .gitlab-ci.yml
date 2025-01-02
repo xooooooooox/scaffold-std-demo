@@ -4,10 +4,19 @@ include:
     file: templates/k8s/java-pipeline.yml
 
 variables:
-  TP_RUN_BUILD: "false"
+  TP_RUN_BUILD: "true"
   TP_RUN_TEST: "false"
   TP_RUN_RELEASE: "false"
   TP_RUN_PAGES: "false"
+
+  ## 构建参数
+  TP_BUILD_IMAGE: ${DF_MAVEN_IMAGE}
+  TP_BUILD_SHELL: "mvn clean package ${TP_MAVEN_OPTS} -DskipTests"
+
+  ## 单元测试参数
+  TP_TEST_IMAGE: ${TP_BUILD_IMAGE}
+  TP_JUNIT_REPORT_PATH: 'target/surefire-reports/TEST-*.xml'
+  TP_TEST_SHELL: "mvn test ${TP_MAVEN_OPTS}"
 
   ## 发布制品参数 - by maven
   TP_MAVEN_DPLOY_SHELL: "mvn clean deploy ${TP_MAVEN_OPTS} -DskipTests \ 
