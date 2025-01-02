@@ -3,6 +3,7 @@
 ## feat/241229-devops-gitlab_ci
 
 - Support GitLab CI/CD
+- Support GitHub Actions
 
 ## feat/241227-common-id_generator
 
